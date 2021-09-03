@@ -1,0 +1,14 @@
+<div class="cards-block">
+<h1>Блог</h1>
+<div id="cardsList" class="card-list">
+    <div class="card" *ngFor="let card of cards; index as cardsId">
+        <a class="card-title" >{{card.name}}</a>
+        <p class="card-content">{{card.description}}</p>
+        <button class="btn-go-to" [routerLink]="['/cards', cardsId]">Перейти</button>
+    </div>
+</div>
+<app-add-button class="add-btn" ></app-add-button>    
+</div>
+
+
+

@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 15%;
+}
+
+.title-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.content-input {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 15px;
+    margin: 5px;
+    background-color: #dbe8f9;
+    border: 1px solid #bac9dd;
+}

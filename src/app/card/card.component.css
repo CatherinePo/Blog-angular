@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 3% 15%;
+}
+
+.title-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.content-input {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.btn {
+    display: flex;
+    padding: 7px 15px;
+    background-color: #dbe8f9;
+    border: 1px solid #bac9dd;
+    margin: 3px;
+}
+
+.del-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 15px;
+    margin: 3px;
+    background-color: #f1cfcd;
+    border: 1px solid #dac4c6
+}
+
+.back-btn {
+    display: flex;
+    width: fit-content;
+    /* justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end; */
+    margin: 3px;
+    padding: 7px 15px;
+    background-color: #dbe8f9;
+    border: 1px solid #bac9dd;
+}

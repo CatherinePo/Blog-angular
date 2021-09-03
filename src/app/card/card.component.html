@@ -1,0 +1,12 @@
+<div class="container">
+    <button [routerLink]="['/']" class="back-btn">Назад</button>
+    <h3>Запись "{{card.name}}"</h3>
+    <form >
+        <input class="title-input" type="text" [value]="card.name" ng-model="card.name">
+        <input class="content-input" type="text" [value]="card.description">
+        <div class="btns">
+            <button class="del-btn" (click)="del()" [routerLink]="['/']">Удалить</button>
+            <button class="btn" [routerLink]="['/']">Сохранить</button>
+        </div>    
+    </form>    
+</div>

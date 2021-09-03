@@ -1,0 +1,10 @@
+.add-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+    padding: 7px 15px;
+    background-color: #dbe8f9;
+    border: 1px solid #bac9dd;
+}
