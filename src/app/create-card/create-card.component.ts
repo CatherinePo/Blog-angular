@@ -10,13 +10,18 @@ import { cards } from '../cards';
   styleUrls: ['./create-card.component.css']
 })
 export class CreateCardComponent implements OnInit {
-  
   cards = cards;
-  @Output() addCard = function() {
+  card = [{
+    name: 'Title1',
+    description: 'A great phone with one of the best cameras'
+  }];
+  cardname = '';
+  carddescription = '';
+  @Output() addCard = function(): void {
     cards.push({
-      name: 'Title1',
-      description: 'A great phone with one of the best cameras'
-    })
+      name: this.cardname,
+      description: this.carddescription
+    });
   };
   constructor(
     private route: ActivatedRoute,

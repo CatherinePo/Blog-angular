@@ -10,8 +10,7 @@ h1 {
 .card-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: flex-start;
 }
 
 .card {
@@ -19,14 +18,28 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-width: 25%;
-    max-width: 5%; */
     margin: 10px;
     margin-bottom: 50px;
-    /* flex-basis: 30%; */
 }
 
+.truncate {
+    background: #f4eddf; 
+    padding: 10px; 
+    white-space: wrap; 
+    overflow: hidden; 
+    text-overflow: clip; 
+   }
+
+.truncate-title {
+    padding: 10px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+   }       
+
 .card-title {
+    display: inline-block;
+    width: 300px;
     font-weight: bold;
 }
 

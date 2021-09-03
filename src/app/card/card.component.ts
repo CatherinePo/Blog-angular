@@ -11,13 +11,21 @@ import { cards } from '../cards';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  cards = cards;
   card;
+  cardname = '';
 
-  @Output() del = function() {
+  @Output() del = function(): void {
     if (confirm('Уверены, что хотите удалить запись?')) {
-      alert("Запись удалена");
-      
+      const names = cards.map(el => el.name);
+      const id = names.indexOf(this.card.name);
+      cards.splice(id, 1);
+      alert('Запись №' + (id + 1) + ' удалена');
       }
+  };
+
+  @Output() save = function(): void {
+      alert('Изменения сохранены');
   };
 
   constructor(

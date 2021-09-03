@@ -2,11 +2,11 @@
     <button [routerLink]="['/']" class="back-btn">Назад</button>
     <h3>Запись "{{card.name}}"</h3>
     <form >
-        <input class="title-input" type="text" [value]="card.name" ng-model="card.name">
-        <input class="content-input" type="text" [value]="card.description">
+        <textarea class="title-input" [value]="card.name" (input)="card.newName = $event.target.value"></textarea>
+        <textarea class="content-input" [value]="card.description" (input)="card.newDescription = $event.target.value"></textarea>
         <div class="btns">
             <button class="del-btn" (click)="del()" [routerLink]="['/']">Удалить</button>
-            <button class="btn" [routerLink]="['/']">Сохранить</button>
+            <button class="btn" [routerLink]="['/']" (click) = "card.name = card.newName; card.description = card.newDescription;">Сохранить</button>
         </div>    
     </form>    
 </div>
