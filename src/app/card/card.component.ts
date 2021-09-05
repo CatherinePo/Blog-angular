@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   cards = cards;
   card;
   cardname = '';
+  
 
   @Output() del = function(): void {
     if (confirm('Уверены, что хотите удалить запись?')) {
@@ -25,7 +26,16 @@ export class CardComponent implements OnInit {
   };
 
   @Output() save = function(): void {
-      alert('Изменения сохранены');
+    if (this.card.newName === undefined){
+      this.card.newName = this.card.name;
+    } else {
+      this.card.name = this.card.newName;
+    }
+    if (this.card.newDescription === undefined){
+      this.card.newDescription = this.card.description;
+    } else {
+      this.card.description = this.card.newDescription;
+    }
   };
 
   constructor(

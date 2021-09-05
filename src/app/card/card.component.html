@@ -6,7 +6,7 @@
         <textarea class="content-input" [value]="card.description" (input)="card.newDescription = $event.target.value"></textarea>
         <div class="btns">
             <button class="del-btn" (click)="del()" [routerLink]="['/']">Удалить</button>
-            <button class="btn" [routerLink]="['/']" (click) = "card.name = card.newName; card.description = card.newDescription;">Сохранить</button>
+            <button class="btn" [routerLink]="['/']" (click) = "save()">Сохранить</button>
         </div>    
     </form>    
 </div>
